@@ -1,12 +1,21 @@
 <script>
-  import { goto } from '$app/navigation';
+  import { goto } from "$app/navigation";
+  import { churchviewService } from "../services/churchview-service";
 
-  let email = '';
-  let password = '';
+  let email = "";
+  let password = "";
+  let errorMessage = "";
 
   async function login() {
       console.log(`attemting to log in email: ${email} with password: ${password}`);
-      goto('/denomination');
+      let success = await churchviewService.login(email, password);
+      if (success) {
+        goto('/denomination');
+      } else {
+        email = "";
+        password ="";
+        errorMessage = "Invalid Credentials";
+      }      
   }
 </script>
 
@@ -23,3 +32,9 @@
       <button class="button is-link">Log In</button>
   </div>
 </form>
+{#if errorMessage}
+  <div class="section">
+    {errorMessage}
+  </div>
+{/if}
+

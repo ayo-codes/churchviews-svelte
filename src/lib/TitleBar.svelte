@@ -1,4 +1,5 @@
 <script>
+  import { user } from "../stores";
   export let title = '';
   export let subTitle = '';
 </script>
@@ -13,6 +14,10 @@
   </div>
   <div class="column">
       <i class="fas fa-donate fa-3x" style="color:rgb(95, 96, 173)" />
-      <div class="is-size-7">ChurchViews-Svelte 0.1</div>
-  </div>
+      {#if $user.email}
+  <div class="is-size-7">{$user.email}</div>
+  {:else}
+      <div class="is-size-7">ChurchViews-Svelte 0.2</div>
+  {/if}
+    </div>
 </div>

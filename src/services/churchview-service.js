@@ -10,11 +10,13 @@ export const churchviewService = {
             const response = await axios.post(`${this.baseUrl}/api/users/authenticate`, { email, password });
             axios.defaults.headers.common["Authorization"] = "Bearer " + response.data.token;
             if (response.data.success) {
+                console.log(response.data.id);
                 user.set({
                     email: email,
-                    token: response.data.token
+                    token: response.data.token,
+                    id: response.data.id,
                 });
-                localStorage.churchview = JSON.stringify({ email: email, token: response.data.token });
+                localStorage.churchview = JSON.stringify({ email: email, token: response.data.token, id: response.data.id });
                 return true;
             }
             return false;
@@ -28,6 +30,7 @@ export const churchviewService = {
         user.set({
             email:"",
             token:"",
+            id:"",
         });
         axios.defaults.headers.common["Authorization"] = "";
         localStorage.removeItem("churchview");
@@ -55,12 +58,46 @@ export const churchviewService = {
             const savedUser = JSON.parse(churchviewCredentials);
             user.set({
                 email: savedUser.email,
-                token: savedUser.token
+                token: savedUser.token,
+                id: savedUser.id,
             });
             axios.defaults.headers.common["Authorization"] = "Bearer " + savedUser.token;
         }
+    },
+
+    async createDenomination(denomination){
+        try {
+            const response = await axios.post(this.baseUrl + "/api/denominations" , denomination);
+            return response.status == 201;
+        } catch (error) {
+            return false;
+        }
+    },
+
+    async getChurches(){
+        try{
+            const response = await axios.get(this.baseUrl + "/api/churches");
+            return response.data;
+        } catch (error) {
+            return [];
+        }
+    },
+
+    async getDenominations(){
+        try{
+            const response = await axios.get(this.baseUrl + "/api/denominations");
+            return response.data;
+        } catch (error) {
+            return [];
+        }
+    },
+
+    async getUsers(){
+        try{
+            const response = await axios.get(this.baseUrl + "/api/users");
+            return response.data;
+        } catch (error) {
+            return [];
+        }
     }
-
-
-
 };

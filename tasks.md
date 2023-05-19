@@ -21,3 +21,13 @@ version 0.2.0
 - updated churchview-service login and logout function to include user.set object
 - added reload function to churchview-service to save the token on local storage
 - added the reload feature to layout page
+
+
+version 0.3.0
+- added createDenomination() , getChurches(), getDenominations() to churchview-service.js
+- updated the DenominationList component to show list of denominations 
+- updated the login function to include the user id as a response.
+- updated stores.js to include the userid 
+- updated the denomination form to include userid to be sent.
+- completed ability to add a denomination
+

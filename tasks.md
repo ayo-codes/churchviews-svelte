@@ -31,3 +31,8 @@ version 0.3.0
 - updated the denomination form to include userid to be sent.
 - completed ability to add a denomination
 
+version 0.4.0
+- Created ChurchForm , ChurchList and ChurchListByDenomination components 
+- added scripts to ChurchForm and ChurchList
+- Created church (to host add church form) and churchlist ( to host list of churches) 
+- added the createChurch method on churchview-service

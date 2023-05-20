@@ -99,5 +99,14 @@ export const churchviewService = {
         } catch (error) {
             return [];
         }
+    },
+
+    async createChurch(id, church ){
+        try{
+            const response = await axios.post (this.baseUrl +"/api/denominations/" + id + "/churches" , church);
+            return response.status == 201;
+        } catch (error) {
+            return false;
+        }
     }
 };

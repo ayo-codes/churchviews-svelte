@@ -5,3 +5,5 @@ export const user = writable({
   token: "",
   id:""
 });
+
+export const latestChurch = writable(null);

@@ -3,11 +3,14 @@
   
       import { onMount } from "svelte";
       import { churchviewService } from "../services/churchview-service";
+	import Coordinates from "./Coordinates.svelte";
   
       let name = "";
       let description ="";
       let denominationList = [];
       let selectedDenomination= "";
+      let latitude = 53.2344043;
+      let longitude = -6.284883;
       let message = "Please add church";
   
       onMount(async () => {
@@ -25,9 +28,12 @@
         const church = {
                 name: name,
                 description: description,
+                longitude: longitude,
+                latitude: latitude
             };
        
 
+            console.log (church)
             const success = await churchviewService.createChurch(denomiNation._id, church);
             if (!success) {
                 message = "Church not added - some error occurred";
@@ -65,6 +71,7 @@
               </select>
           </div>
       </div>
+      <Coordinates bind:latitude bind:longitude />
       <div class="field">
           <div class="control">
               <button class="button is-link is-light">Add Church</button>
@@ -73,4 +80,5 @@
       <div class="box">
           {message}
       </div>
+      
   </form>

@@ -4,12 +4,12 @@
 </script>
 
 <div class="columns is-vcentered">
-  <div class="column is-two-thirds">
+  <div class="column is-half">
       <TitleBar title={'ChurchViews'} subTitle={'Sign up or Log in'} />
   </div>
-  <div class="column">
+  <div class="column is-half">
     <slot>
-      <WelcomeNavigator />   <!-- makes welcome Navigator the default if none is specified -->
+      <WelcomeNavigator />    <!-- makes welcome Navigator the default if none is specified -->
     </slot>
       
   </div>

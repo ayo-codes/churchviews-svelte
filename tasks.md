@@ -36,3 +36,25 @@ version 0.4.0
 - added scripts to ChurchForm and ChurchList
 - Created church (to host add church form) and churchlist ( to host list of churches) 
 - added the createChurch method on churchview-service
+
+
+version 0.5.0
+- installed leaflets 
+- introduced new service class leaflet-map.js 
+- updated the main navigator bar to include map
+- create new route called /map
+- added zoom control and layer control 
+- added Street style map layer 
+- add a way to get the latest donations lat and long 
+- created coordinates component 
+- included coordinates component into the church route
+- include map on the church page
+- added latestChurch to stores.js to update map 
+- imported latestChurch to the churchviewService.createChurch and churchMap
+- switched const map to let map on churchMap 
+- added moveTo for the map 
+- fixed the window bug +page.ts
+
+
+
+

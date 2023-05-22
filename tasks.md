@@ -55,6 +55,15 @@ version 0.5.0
 - added moveTo for the map 
 - fixed the window bug +page.ts
 
+version 0.6.0
+- installed svelte frappe charts 
+- added a charts page 
+- added bar chart
+- added chart for getting number of churches per geographical province 
+- added pie charts 
+- added chart for getting number of churches per denomination
+- added system to help user select the chart , but not fully working yet
+
 
 
 

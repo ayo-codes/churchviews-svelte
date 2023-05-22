@@ -9,6 +9,8 @@
       let description ="";
       let denominationList = [];
       let selectedDenomination= "";
+      let selectedProvince="";
+      let provinceOptions = ["Connacht" , "Leinster" ,"Munster" , "Ulster"];
       let latitude = 53.2344043;
       let longitude = -6.284883;
       let message = "Please add church";
@@ -18,7 +20,7 @@
       });
   
     async function addChurch() {
-      if (name && description && selectedDenomination) {
+      if (name && description && selectedDenomination && selectedProvince) {
         const denominationDetails = selectedDenomination.split(",");
         console.log(denominationDetails);
         const denomiNation = denominationList.find((denomination) => denomination._id == denominationDetails[1]);
@@ -29,7 +31,9 @@
                 name: name,
                 description: description,
                 longitude: longitude,
-                latitude: latitude
+                latitude: latitude,
+                province: selectedProvince,
+
             };
        
 
@@ -55,13 +59,13 @@
         <label class="label" for="description">Enter a brief description </label>
         <textarea bind:value={description} class="textarea" id="description" name="description" type="text" />
     </div>
-      <!-- <div class="field">
+      <div class="field">
           <div class="control">
-              {#each paymentMethods as method}
-                  <input bind:group={selectedMethod} class="radio" type="radio" value={method} /> {method}
+              {#each provinceOptions as province}
+                  <input bind:group={selectedProvince} class="radio" type="radio" value={province} /> {province}
               {/each}
           </div>
-      </div> -->
+      </div>
       <div class="field">
           <div class="select">
               <select bind:value={selectedDenomination}>

@@ -62,7 +62,10 @@ version 0.6.0
 - added chart for getting number of churches per geographical province 
 - added pie charts 
 - added chart for getting number of churches per denomination
-- added system to help user select the chart , but not fully working yet
+- added system to help user select the chart if they are selecting by denomination
+
+version 0.6.1 
+- testing image upload page function
 
 
 

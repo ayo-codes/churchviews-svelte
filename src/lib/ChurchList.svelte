@@ -2,10 +2,12 @@
   import { onMount } from "svelte";
   import { churchviewService } from "../services/churchview-service";
 
+
   let churchList = [];
 
   onMount(async () => {
       churchList = await churchviewService.getChurches();
+      denominationList = await churchviewService.getDenominations();
   });
 </script>
 

@@ -1,8 +1,8 @@
 <script>
   // @ts-nocheck
   
-      import { onMount } from "svelte";
-      import { churchviewService } from "../services/churchview-service";
+    import { onMount } from "svelte";
+    import { churchviewService } from "../services/churchview-service";
 	import Coordinates from "./Coordinates.svelte";
   
       let name = "";

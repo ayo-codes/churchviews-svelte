@@ -71,7 +71,7 @@ version 0.6.1
 - created a delete image functionality
 - added an uploadImage, deleteImage and getDenominationById method to churchviewservice
 - created dynamic pages for the churches 
-- updated the signup and login process to take into account hashing and salting of passwords
+- updated the signup and login process to take into account hashing and salting of passwords 
 
 
 

@@ -10,10 +10,11 @@
 
 <div class="columns is-vcentered">
   <div class="column has-text-centered">
-      <img alt="Homer" src="/homer3.png" width="300" />
+      <img alt="inside_cathedral" src="/inside_cathedral.jpg" width="500" />
   </div>
   <div class="column box has-text-centered">
-      <h1 class="title is-4">Add a Denomination!</h1>
+      <h1 class="title is-4">Add a Denomination</h1>
+    
       <DenominationForm />
   </div>
 </div>

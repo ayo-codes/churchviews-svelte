@@ -4,6 +4,7 @@
       import { onMount } from "svelte";
       import { churchviewService } from "../services/churchview-service";
       import { user } from "../stores";
+      import { goto } from "$app/navigation";
   
 
       let denominationEntered = "";
@@ -32,6 +33,7 @@
         }
         message = `You've successfully added the denomination ${denominationEntered}`;
         denominationEntered=""
+        goto("/denominationlist")
 
       } else {
         message = "Please enter a denomination into the denomination field";

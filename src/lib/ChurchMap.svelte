@@ -16,17 +16,20 @@
 	onMount(async () => {
 		map = new LeafletMap("church-map", mapConfig);
 		map.showZoomControl();
-    map.addLayerGroup("Churches");
+    map.addLayerGroup("Anglican");
+		map.addLayerGroup("Catholic")
 		map.showLayerControl();  
 		const churches = await churchviewService.getChurches();
 		churches.forEach((church) => {
 			addChurchMarker(map, church);
 		});
+		
 	});
 
 	function addChurchMarker(map, church) {
+		console.log(church);
 		const churchStr = `${church.name}`;
-		map.addMarker({ lat: church.latitude, lng: church.longitude }, churchStr, "Churches");
+		map.addMarker({ lat: church.latitude, lng: church.longitude }, churchStr, "Anglican");
     map.moveTo(8, {lat: church.latitude, lng: church.longitude });
 	}
 

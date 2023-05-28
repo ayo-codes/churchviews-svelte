@@ -85,6 +85,5 @@
       <div class="box">
           {message}
       </div>
-      <TestUpload />
   </form>
  

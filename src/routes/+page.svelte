@@ -9,10 +9,11 @@
 
 <div class="columns is-vcentered content">
   <div class="column has-text-centered">
-      <img width="300" src="/homer.png" alt="homer" />
+      <img width="600" src="/churches.jpg" alt="" />
   </div>
-  <div class="column">
+  <div class="column has-text-centered">
       <h1 class="title">ChurchViews</h1>
-      <p>Photos of Churches Across the world !</p>
+      <br>
+      <h3 class="subtitle">Welcome to ChurchViews where you can save your photos of Churches Across the world and have them sorted by the church denomination!</h3>
   </div>
 </div>

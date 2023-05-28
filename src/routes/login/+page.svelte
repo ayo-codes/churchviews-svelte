@@ -10,7 +10,7 @@
 
 <div class="columns">
   <div class="column has-text-centered">
-      <img alt="homer" src="/homer2.png" width="300" />
+      <img alt="domed-cathedral" src="/domed-cathedral.jpg" width="600" />
   </div>
   <div class="column">
       <div class="box">

@@ -73,7 +73,8 @@ version 0.6.1
 - created dynamic pages for the churches 
 - updated the signup and login process to take into account hashing and salting of passwords 
 
-
+version 0.6.2
+- minor improvements to improve ui for deployment
 
 
 

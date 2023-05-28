@@ -127,5 +127,39 @@ export const churchviewService = {
 		} catch (error) {
 			return [];
 		}
-	}
+	},
+
+	async getDenominationById(id) {
+		try {
+			const response = await axios.get(this.baseUrl + '/api/denominations/' + id);
+			return response.data;
+		} catch (error) {
+			return [];
+		}
+	},
+	async uploadImage(id, imagefile) {
+		try {
+			const response = await axios.post(
+				this.baseUrl + '/api/churches/' + id + '/uploadimage'
+			, imagefile);
+			console.log(response);
+			// return response.status == 201;
+			// return response.status;
+		} catch (error) {
+			return false;
+		}
+	},
+	async deleteImage(id) {
+		try {
+			const response = await axios.post(
+				this.baseUrl + '/api/churches/' + id + '/deleteimage');
+			console.log(response);
+			// return response.status == 201;
+			// return response.status;
+		} catch (error) {
+			return false;
+		}
+	},
+
 };
+

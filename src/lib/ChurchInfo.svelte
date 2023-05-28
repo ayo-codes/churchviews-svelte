@@ -1,7 +1,8 @@
 <script>
   import { onMount } from "svelte";
   import { churchviewService } from "../services/churchview-service";
-  import { goto } from "$app/navigation";
+
+
 
   let churchList = [];
   let denominationList = [];
@@ -18,7 +19,6 @@
       <th>Name</th>
       <th>Description</th>
       <th>Denomination Name</th>
-      <th> More Details </th>
    
   </thead>
   <tbody>
@@ -38,10 +38,7 @@
                   {/if}
                   {/each}
               </td>
-              <td>  <a href="/churchlist/{church._id}" class="column">
-                <i class="fas fa-th-list fa-3x" style="color:rgb(63, 122, 139)" /></td>
           </tr>
       {/each}   
   </tbody>
 </table>
-

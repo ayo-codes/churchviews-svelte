@@ -8,3 +8,4 @@ export const user = writable({
 
 export const latestChurch = writable(null);
 
+export const imageChange = writable(null);

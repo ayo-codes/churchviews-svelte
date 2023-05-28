@@ -65,7 +65,17 @@ version 0.6.0
 - added system to help user select the chart if they are selecting by denomination
 
 version 0.6.1 
-- testing image upload page function
+- tested the image upload page function
+- testing an imageChange store
+- created an image upload component
+- created a delete image functionality
+- added an uploadImage, deleteImage and getDenominationById method to churchviewservice
+- created dynamic pages for the churches 
+- updated the signup and login process to take into account hashing and salting of passwords
+
+
+
+
 
 
 

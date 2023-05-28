@@ -4,6 +4,7 @@
     import { onMount } from "svelte";
     import { churchviewService } from "../services/churchview-service";
 	import Coordinates from "./Coordinates.svelte";
+    import TestUpload from "./TestUpload.svelte";
   
       let name = "";
       let description ="";
@@ -84,5 +85,6 @@
       <div class="box">
           {message}
       </div>
-      
+      <TestUpload />
   </form>
+ 
